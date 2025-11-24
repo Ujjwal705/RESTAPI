@@ -4,7 +4,7 @@ import 'dotenv/config';
 
 import { connectMongoDB } from './config/db.js'; // MongoDB connection function
 
-import { securityMiddleware, corsMiddleware, loggingMiddleware, errorHandler } from './middlewares/index.js';
+import { securityMiddleware, corsMiddleware, loggingMiddleware, errorHandler } from './middlewares/logger.middleware.js';
 
 import userRouter from './routes/user.route.js'; // User routes
 
