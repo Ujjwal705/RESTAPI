@@ -1,13 +1,13 @@
-const {
+import {
   handleGetAllUsers,
   handlegetUserById,
   handleUpdateUserById,
   handleDeleteUserById,
   handleCreateNewUser,
-} = require('../src/controllers/user.controller');
+} from '../src/controllers/user.controller.js';
 
 // Mock the User model used by controllers
-jest.mock('../src/models/user.model', () => ({
+jest.mock('../src/models/user.model.js', () => ({
   find: jest.fn(),
   findById: jest.fn(),
   findByIdAndUpdate: jest.fn(),
@@ -15,7 +15,7 @@ jest.mock('../src/models/user.model', () => ({
   create: jest.fn(),
 }));
 
-const User = require('../src/models/user.model');
+import User from '../src/models/user.model.js';
 
 function mockRes() {
   const res = {};
